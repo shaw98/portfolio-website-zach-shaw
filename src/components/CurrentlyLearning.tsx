@@ -9,13 +9,7 @@ interface LearningItem {
 }
 
 const learningItems: LearningItem[] = [
-  {
-    icon: GraduationCap,
-    title: "MS in Data Science & AI — University of Denver",
-    description:
-      "Exploring the academic side of the tools I've been building with. Data modeling, machine learning foundations, and the math behind the magic.",
-    status: "Exploring programs",
-  },
+  
   {
     icon: Workflow,
     title: "n8n — Backend Automation Workflows",
