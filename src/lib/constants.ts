@@ -9,7 +9,7 @@ export const NAV_LINKS = [
 
 export const SOCIAL_LINKS = {
   email: "mailto:support@shawdesignlabs.com",
-  linkedin: "www.linkedin.com/in/zach-shaw-7134037",
+  linkedin: "https://www.linkedin.com/in/zach-shaw-7134037",
   github: "https://github.com/shaw98",
 } as const;
 
