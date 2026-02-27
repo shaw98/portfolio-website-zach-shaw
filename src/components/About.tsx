@@ -29,7 +29,7 @@ const milestones = [
 const personalDetails = [
   { icon: Flag, label: "Chasing birdies (and mostly bogeys)", image: "/golf.JPG" },
   { icon: Flame, label: "Smoking brisket low & slow", image: "/brisket.jpeg" },
-  { icon: Heart, label: "Curious, empathetic, always learning", image: "/learning.jpeg" },
+  { icon: Heart, label: "Volunteering with Operation Christmas Child", image: "/learning.jpeg" },
 ];
 
 export default function About() {
@@ -77,37 +77,39 @@ export default function About() {
 
         {/* Personal / human details */}
         <div className="bg-surface rounded-2xl p-8 md:p-10 shadow-sm border border-slate-900/5">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h3 className="text-xl md:text-2xl font-heading font-800 mb-2 text-center">
               When I&apos;m not building
             </h3>
             <p className="text-slate-500 text-center mb-8 text-[15px]">
               The stuff that keeps me grounded and makes the work worth doing.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
               {personalDetails.map((item, index) => {
                 const showImage = item.image && !imageErrors.has(index);
                 return (
                   <div
                     key={item.label}
-                    className="flex items-center gap-2.5 rounded-full bg-warm-tint px-5 py-2.5 border border-slate-900/5
-                      transition-all duration-300 hover:border-teal/30 hover:bg-teal-light"
+                    className="group flex flex-col items-center text-center rounded-2xl p-4 border border-slate-900/5 bg-warm-tint/30
+                      transition-all duration-300 hover:shadow-lg hover:border-teal/20 hover:-translate-y-0.5"
                   >
                     {showImage ? (
-                      <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0 bg-slate-200/50">
+                      <div className="relative w-full aspect-square max-w-[200px] mx-auto rounded-2xl overflow-hidden bg-slate-200/50 mb-4">
                         <Image
                           src={item.image}
                           alt=""
-                          width={36}
-                          height={36}
-                          className="object-cover w-full h-full"
+                          width={200}
+                          height={200}
+                          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                           onError={() => setImageErrors((prev) => new Set([...prev, index]))}
                         />
                       </div>
                     ) : (
-                      <item.icon size={18} className="text-teal shrink-0" />
+                      <div className="w-full aspect-square max-w-[200px] mx-auto rounded-2xl bg-teal-light flex items-center justify-center mb-4">
+                        <item.icon size={48} className="text-teal" />
+                      </div>
                     )}
-                    <span className="text-sm font-body font-500 text-slate-700 whitespace-nowrap">
+                    <span className="text-sm font-body font-600 text-slate-700">
                       {item.label}
                     </span>
                   </div>

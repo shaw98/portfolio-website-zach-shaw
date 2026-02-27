@@ -1,4 +1,4 @@
-import { GraduationCap, Workflow, Search, Sparkles } from "lucide-react";
+import { Code2, Bot, Workflow, Sparkles } from "lucide-react";
 import SectionWrapper from "./SectionWrapper";
 
 interface LearningItem {
@@ -15,6 +15,20 @@ const learningItems: LearningItem[] = [
     description:
       "Moving beyond one-off scripts into connected, visual automation pipelines. The goal: make every repetitive business process self-running.",
     status: "Actively building",
+  },
+  {
+    icon: Code2,
+    title: "Next.js & React",
+    description:
+      "Building and shipping this site and other web apps. Component-driven UI, server and client rendering, and keeping things fast and maintainable.",
+    status: "Using daily",
+  },
+  {
+    icon: Bot,
+    title: "Cursor & AI-assisted development",
+    description:
+      "Pairing with AI to go from idea to working code faster — without a traditional CS background. Learning how to prompt, review, and ship with modern tooling.",
+    status: "Exploring",
   },
 ];
 
@@ -34,8 +48,7 @@ export default function CurrentlyLearning() {
             What I&apos;m learning right now
           </h2>
           <p className="text-lg text-slate-500 leading-relaxed">
-            I&apos;m always learning something new, but right now I&apos;m especially focused on
-            how non-traditional builders can ship real products with modern AI tools.
+            I&apos;m always picking up new tools. Here are a few I&apos;m digging into right now — I rotate these as my focus shifts.
           </p>
         </div>
 

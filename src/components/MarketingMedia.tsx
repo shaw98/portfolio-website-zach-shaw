@@ -9,35 +9,39 @@ interface MediaItem {
   role: string;
   impact: string;
   embedUrl: string | null;
+  videoSrc?: string | null;
 }
 
 const mediaItems: MediaItem[] = [
   {
-    title: "Dealership Brand Commercial",
+    title: "Mile High RV Show",
     description:
-      "A high-energy, customer-facing commercial designed to shift the dealership's brand perception from 'just another lot' to a trusted, adventure-ready destination.",
-    role: "Directed concept, scripted messaging, coordinated production across locations.",
+      "Event spot for the Mile High RV Show — high-energy, customer-facing spot designed to drive traffic and position the show as the destination for RV buyers.",
+    role: "Editor, videographer, copywriter, designer, and audio. Music via Suno; voice and sound design with ElevenLabs and related tools.",
     impact:
-      "Became the flagship brand spot — ran across YouTube, social, and in-store displays for over a year.",
+      "Ran across digital, social, and in-show displays to support one of the key annual events.",
     embedUrl: null,
+    videoSrc: "/MileHighRVShow_v2-1920x1080.mov",
   },
   {
-    title: "Seasonal Sales Campaign",
+    title: "WRV Model Year Closeout",
     description:
-      "A multi-location campaign spot built around seasonal urgency without feeling pushy or generic.",
-    role: "Wrote copy, selected music, managed shoot logistics, and handled post-production feedback.",
+      "Campaign spot built around model-year closeout urgency — clear messaging without feeling pushy, built for multi-location use.",
+    role: "Editor, videographer, copywriter, designer, and audio. Music via Suno; voice and sound with ElevenLabs and related tools.",
     impact:
-      "Drove measurable uptick in foot traffic during the campaign window — one of the best-performing seasonal pushes.",
+      "Supported sales teams with a consistent, on-brand spot for the closeout window.",
     embedUrl: null,
+    videoSrc: "/WRV_ModelYearCloseOut.mov",
   },
   {
-    title: "Customer Testimonial Series",
+    title: "Yeti",
     description:
-      "Real customer stories, shot on location, focusing on the experience rather than the product.",
-    role: "Developed interview framework, coached customers on-camera, edited for tone and pacing.",
+      "Experimental short created with AI video tools — exploring how generative video can support concepting and storytelling.",
+    role: "Concept, prompts, and edit. Nano Bana Pro, Veo 3, and Google Flow.",
     impact:
-      "Built social proof that sales teams could share directly with prospects — 'watch someone like you talk about us.'",
+      "Personal experiment in AI-generated video; part of learning how new tools fit into the creative process.",
     embedUrl: null,
+    videoSrc: "/Yeti.mov",
   },
 ];
 
@@ -51,9 +55,7 @@ export default function MarketingMedia() {
             The creative side
           </h2>
           <p className="text-lg text-slate-500 leading-relaxed">
-            As Marketing Director, I didn&apos;t just manage campaigns — I got
-            behind the camera, wrote the scripts, and made sure every piece
-            felt like us.
+            As Marketing Director, I got behind the camera, wrote the scripts, and made sure every commercial felt like us. I also experiment with AI video tools — prompts, generative clips, and editing — to see how they fit into the creative process.
           </p>
         </div>
 
@@ -65,9 +67,17 @@ export default function MarketingMedia() {
               className="group bg-surface rounded-2xl border border-slate-900/5 shadow-sm overflow-hidden
                 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
-              {/* Video embed area */}
+              {/* Video area: local file or embed */}
               <div className="relative aspect-video bg-slate-900/3">
-                {item.embedUrl ? (
+                {item.videoSrc ? (
+                  <video
+                    src={item.videoSrc}
+                    title={item.title}
+                    controls
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-contain"
+                  />
+                ) : item.embedUrl ? (
                   <iframe
                     src={item.embedUrl}
                     title={item.title}
@@ -123,11 +133,6 @@ export default function MarketingMedia() {
           ))}
         </div>
 
-        {/* Note about upcoming content */}
-        <p className="text-center text-sm text-slate-400 font-body">
-          Video embeds will be added as media assets are finalized.
-          Each card is ready to accept a YouTube or Vimeo URL.
-        </p>
       </div>
     </SectionWrapper>
   );

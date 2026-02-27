@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import type { Project } from "@/lib/projects";
 
@@ -25,9 +26,19 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Header */}
       <div className="flex items-start gap-4 mb-4">
         <div
-          className={`shrink-0 flex items-center justify-center w-11 h-11 rounded-xl ${accentBg} transition-transform duration-300 group-hover:scale-110`}
+          className={`shrink-0 flex items-center justify-center w-11 h-11 rounded-xl ${accentBg} transition-transform duration-300 group-hover:scale-110 overflow-hidden`}
         >
-          <Icon size={22} className={accentText} />
+          {project.iconImage ? (
+            <Image
+              src={project.iconImage}
+              alt=""
+              width={44}
+              height={44}
+              className="object-contain w-full h-full"
+            />
+          ) : (
+            <Icon size={22} className={accentText} />
+          )}
         </div>
         <div className="min-w-0">
           <h3 className="text-lg font-heading font-800 leading-snug">

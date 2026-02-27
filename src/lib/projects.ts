@@ -17,6 +17,8 @@ export interface Project {
   title: string;
   tagline: string;
   icon: LucideIcon;
+  /** Optional path to custom icon image (e.g. /gather_icon.png). When set, shown instead of Lucide icon. */
+  iconImage?: string | null;
   accent: "coral" | "teal";
   size: ProjectSize;
   problem: string;
@@ -31,6 +33,7 @@ export const projects: Project[] = [
     title: "Gather",
     tagline: "Family gatherings without group-text chaos",
     icon: UtensilsCrossed,
+    iconImage: "/gather_icon.png",
     accent: "coral",
     size: "large",
     problem:
@@ -63,6 +66,7 @@ export const projects: Project[] = [
     title: "ForeCast Golf",
     tagline: "Live outing scoring + leaderboard",
     icon: CloudSun,
+    iconImage: "/foreCast_logo.png",
     accent: "coral",
     size: "medium",
     problem:
