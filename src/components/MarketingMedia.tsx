@@ -20,8 +20,7 @@ const mediaItems: MediaItem[] = [
     role: "Editor, videographer, copywriter, designer, and audio. Music via Suno; voice and sound design with ElevenLabs and related tools.",
     impact:
       "Ran across digital, social, and in-show displays to support one of the key annual events.",
-    embedUrl: null,
-    videoSrc: "/MileHighRVShow_v2-1920x1080.mov",
+    embedUrl: "https://www.youtube.com/embed/Uakd0TIK_kk",
   },
   {
     title: "WRV Model Year Closeout",
@@ -30,8 +29,7 @@ const mediaItems: MediaItem[] = [
     role: "Editor, videographer, copywriter, designer, and audio. Music via Suno; voice and sound with ElevenLabs and related tools.",
     impact:
       "Supported sales teams with a consistent, on-brand spot for the closeout window.",
-    embedUrl: null,
-    videoSrc: "/WRV_ModelYearCloseOut.mov",
+    embedUrl: "https://www.youtube.com/embed/d9ycudHX6xg",
   },
   {
     title: "Yeti",
@@ -40,8 +38,7 @@ const mediaItems: MediaItem[] = [
     role: "Concept, prompts, and edit. Nano Bana Pro, Veo 3, and Google Flow.",
     impact:
       "Personal experiment in AI-generated video; part of learning how new tools fit into the creative process.",
-    embedUrl: null,
-    videoSrc: "/Yeti.mov",
+    embedUrl: "https://www.youtube.com/embed/qKdZvRwc8LQ",
   },
 ];
 

@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Large video files (hosted on YouTube)
+public/Yeti.mov
+public/MileHighRVShow_v2-1920x1080.mov
+public/WRV_ModelYearCloseOut.mov
