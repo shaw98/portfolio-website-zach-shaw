@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { ArrowDown } from "lucide-react";
-import PhotoPlaceholder from "./PhotoPlaceholder";
 
 export default function Hero() {
   const [visible, setVisible] = useState(false);
@@ -78,7 +78,13 @@ export default function Hero() {
               visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-6 scale-95"
             }`}
           >
-            <PhotoPlaceholder className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80" />
+            <Image
+              src="/hero.JPG"
+              alt="Zach Shaw"
+              width={320}
+              height={320}
+              className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl object-cover"
+            />
           </div>
         </div>
 
