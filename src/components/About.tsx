@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
 import { Flame, TreePine, Flag, Code2, Heart } from "lucide-react";
 import SectionWrapper from "./SectionWrapper";
 
@@ -23,12 +27,14 @@ const milestones = [
 ];
 
 const personalDetails = [
-  { icon: Flag, label: "Chasing birdies (and mostly bogeys)" },
-  { icon: Flame, label: "Smoking brisket low & slow" },
-  { icon: Heart, label: "Curious, empathetic, always learning" },
+  { icon: Flag, label: "Chasing birdies (and mostly bogeys)", image: "/golf.JPG" },
+  { icon: Flame, label: "Smoking brisket low & slow", image: "/brisket.jpeg" },
+  { icon: Heart, label: "Curious, empathetic, always learning", image: "/learning.jpeg" },
 ];
 
 export default function About() {
+  const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
+
   return (
     <SectionWrapper id="about" tinted>
       <div className="space-y-14">
@@ -79,18 +85,34 @@ export default function About() {
               The stuff that keeps me grounded and makes the work worth doing.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              {personalDetails.map((item) => (
-                <div
-                  key={item.label}
-                  className="flex items-center gap-2.5 rounded-full bg-warm-tint px-5 py-2.5 border border-slate-900/5
-                    transition-all duration-300 hover:border-teal/30 hover:bg-teal-light"
-                >
-                  <item.icon size={18} className="text-teal shrink-0" />
-                  <span className="text-sm font-body font-500 text-slate-700 whitespace-nowrap">
-                    {item.label}
-                  </span>
-                </div>
-              ))}
+              {personalDetails.map((item, index) => {
+                const showImage = item.image && !imageErrors.has(index);
+                return (
+                  <div
+                    key={item.label}
+                    className="flex items-center gap-2.5 rounded-full bg-warm-tint px-5 py-2.5 border border-slate-900/5
+                      transition-all duration-300 hover:border-teal/30 hover:bg-teal-light"
+                  >
+                    {showImage ? (
+                      <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0 bg-slate-200/50">
+                        <Image
+                          src={item.image}
+                          alt=""
+                          width={36}
+                          height={36}
+                          className="object-cover w-full h-full"
+                          onError={() => setImageErrors((prev) => new Set([...prev, index]))}
+                        />
+                      </div>
+                    ) : (
+                      <item.icon size={18} className="text-teal shrink-0" />
+                    )}
+                    <span className="text-sm font-body font-500 text-slate-700 whitespace-nowrap">
+                      {item.label}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

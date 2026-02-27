@@ -29,18 +29,18 @@ export const projects: Project[] = [
   {
     slug: "gather",
     title: "Gather",
-    tagline: "Meal planning for real families",
+    tagline: "Family gatherings without group-text chaos",
     icon: UtensilsCrossed,
     accent: "coral",
     size: "large",
     problem:
-      "My family was stuck in the 'what's for dinner?' loop every single night — wasting time, money, and patience.",
+      "Coordinating family dinners meant endless group texts, scattered RSVPs, and no single place to see who was coming, what they were bringing, or when to send reminders.",
     built:
-      "A full meal planning app (currently in beta) that lets families plan weekly meals, auto-generate grocery lists, and save favorite recipes.",
+      "A mobile app built with React Native (Expo) and Firebase where families create events, track RSVPs and headcount, assign dishes, and send push notifications — all wrapped in a warm 'Sunday Roast' design theme.",
     outcome:
-      "Our household grocery runs went from chaotic to intentional. Now being tested by other families too.",
+      "Holiday meals and Sunday dinners feel less chaotic: everyone sees the same event details, knows what they’re bringing, and gets gentle reminders right on their phone.",
     learned:
-      "State management in a real app, working with databases, and how to actually ship something people use — not just a side project that sits on GitHub.",
+      "How to ship a full mobile MVP with Expo, phone-number auth, Firestore real-time sync, and a coherent design system — plus how much great UX matters when you’re designing for busy, non-technical family members.",
   },
   {
     slug: "rv-finance-calculator",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     accent: "teal",
     size: "medium",
     problem:
-      "Sales teams needed quick, accurate finance estimates on the lot — not back at a desk with a spreadsheet.",
+      "Sale and Finance managers needed quick, accurate finance estimates on the lot or at a RV show,not back at a desk with a spreadsheet.",
     built:
       "A mobile-first calculator that handles RV-specific financing: trade values, down payments, tax, and monthly estimates in seconds.",
     outcome:
@@ -61,50 +61,18 @@ export const projects: Project[] = [
   {
     slug: "forecast-golf",
     title: "ForeCast Golf",
-    tagline: "Weather meets tee time",
+    tagline: "Live outing scoring + leaderboard",
     icon: CloudSun,
     accent: "coral",
     size: "medium",
     problem:
-      "Checking three different apps before deciding whether to book a round got old fast.",
+      "For a small group outing, we needed a dead-simple way to track scores without paper cards, group texts, or one person doing math for everyone.",
     built:
-      "A golf-focused weather app that shows hourly conditions for your course — wind, rain chance, feels-like temp — laid out for golfers, not meteorologists.",
+      "A real-time web app for a Fox Hollow Golf Course outing: predefined game slots, nickname signup, tee selection with yardages, quick score entry, and a combined live leaderboard across all groups (plus a demo mode to explore without saving data).",
     outcome:
-      "I actually use this every week. Built it for myself, but it turns out every golfer I know wants the same thing.",
+      "Everyone stayed on the same page during the round — scores updated instantly, players could check their scorecard anytime, and editing past holes was painless on mobile.",
     learned:
-      "Working with external APIs, handling location data, and building something where I'm genuinely my own best beta tester.",
-  },
-  {
-    slug: "family-meal-notifier",
-    title: "Family Meal Notifier",
-    tagline: "Dinner's ready — automatically",
-    icon: Bell,
-    accent: "teal",
-    size: "small",
-    problem:
-      "With two little kids and busy schedules, someone always missed the 'dinner's ready' announcement.",
-    built:
-      "A simple notification system that pings family members when it's time to eat — no more yelling up the stairs.",
-    outcome:
-      "One less small friction in an already-hectic evening routine. The kids think it's hilarious.",
-    learned:
-      "Push notifications, scheduling logic, and that the smallest tools often get the most daily use.",
-  },
-  {
-    slug: "quarterback-mathgame",
-    title: "Quarterback Mathgame",
-    tagline: "Math drills disguised as football",
-    icon: Gamepad2,
-    accent: "coral",
-    size: "small",
-    problem:
-      "Getting a 7-year-old to practice math without a battle required some creative bribery.",
-    built:
-      "A football-themed math game where correct answers move the ball down the field toward a touchdown.",
-    outcome:
-      "My son actually asks to play it. That alone made the whole project worth it.",
-    learned:
-      "Game loop basics, keeping state across rounds, and that building for your kids is the most honest user testing you'll ever do.",
+      "Firebase/Firestore real-time data patterns, mobile-first UX for fast input, and how details like tee/yardage context and dark mode make an event app feel polished."
   },
   {
     slug: "rv-sale-flyer-generator",
@@ -116,27 +84,11 @@ export const projects: Project[] = [
     problem:
       "Creating sale event flyers for multiple locations meant hours in design tools for every campaign.",
     built:
-      "A templated flyer generator where the marketing team inputs event details and gets print-ready, branded PDFs instantly.",
+      "A templated flyer generator where the marketing  inputs event details and gets print-ready, branded PDFs instantly.",
     outcome:
-      "What used to take half a day per location now takes minutes. The team actually enjoys making them.",
+      "What used to take a week or more for a RV show now takes minutes.",
     learned:
-      "PDF generation, template systems, and how to build internal tools that people adopt because they're genuinely easier than the old way.",
-  },
-  {
-    slug: "thumbnail-generator",
-    title: "Thumbnail Generator",
-    tagline: "Consistent visuals, zero design debt",
-    icon: Image,
-    accent: "coral",
-    size: "small",
-    problem:
-      "YouTube and social thumbnails were inconsistent — everyone had their own approach, and nothing looked cohesive.",
-    built:
-      "A tool that takes a title and image, applies brand-consistent overlays, and outputs ready-to-upload thumbnails.",
-    outcome:
-      "Content across channels finally looks like it comes from the same company.",
-    learned:
-      "Image manipulation in code, canvas APIs, and how small visual consistency compounds into real brand trust.",
+      "PDF generation, template systems, scraping websites, scripts and automations and how to build internal tools that people adopt because they're genuinely easier than the old way.",
   },
   {
     slug: "qr-code-generator",
@@ -148,7 +100,7 @@ export const projects: Project[] = [
     problem:
       "Every QR code tool wanted a monthly subscription for basic branding and tracking.",
     built:
-      "A straightforward QR code generator with custom colors, logo embedding, and download options — no account needed.",
+      "A straightforward QR code generator with custom colors, logo embedding, campaign tracking, batch building and download options — no account needed.",
     outcome:
       "Used across print materials, event signage, and vehicle displays at every location.",
     learned:

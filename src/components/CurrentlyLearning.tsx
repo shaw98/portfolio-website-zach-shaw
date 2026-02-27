@@ -9,20 +9,12 @@ interface LearningItem {
 }
 
 const learningItems: LearningItem[] = [
-  
   {
     icon: Workflow,
     title: "n8n — Backend Automation Workflows",
     description:
       "Moving beyond one-off scripts into connected, visual automation pipelines. The goal: make every repetitive business process self-running.",
     status: "Actively building",
-  },
-  {
-    icon: Search,
-    title: "Answer Engine Optimization (AEO)",
-    description:
-      "As search shifts from links to direct answers, I'm studying how to structure content so AI assistants and search engines surface it first.",
-    status: "Deep dive",
   },
 ];
 
@@ -42,8 +34,8 @@ export default function CurrentlyLearning() {
             What I&apos;m learning right now
           </h2>
           <p className="text-lg text-slate-500 leading-relaxed">
-            The best part of this chapter is that there&apos;s always
-            something new to dig into. Here&apos;s where my head is at lately.
+            I&apos;m always learning something new, but right now I&apos;m especially focused on
+            how non-traditional builders can ship real products with modern AI tools.
           </p>
         </div>
 
